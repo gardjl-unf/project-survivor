@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsurvivor_core.a CMakeFiles/survivor_core.dir/src/core/ecs.c.o CMakeFiles/survivor_core.dir/src/core/math_utils.c.o CMakeFiles/survivor_core.dir/src/core/ability_system.c.o
+/usr/bin/ranlib libsurvivor_core.a

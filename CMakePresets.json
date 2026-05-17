@@ -1,0 +1,114 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "debug",
+      "displayName": "Debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "profile",
+      "displayName": "Profile (optimized + debug symbols)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-profile",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CROWN_ENABLE_SANITIZERS": "OFF",
+        "BUILD_TESTING": "OFF",
+        "CMAKE_CXX_FLAGS": "-fno-omit-frame-pointer -g"
+      }
+    },
+    {
+      "name": "coverage",
+      "displayName": "Coverage (Debug + gcov)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-coverage",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CROWN_ENABLE_SANITIZERS": "OFF",
+        "CROWN_ENABLE_COVERAGE": "ON"
+      }
+    },
+    {
+      "name": "mutation",
+      "displayName": "Mutation Prep (Debug, no sanitizers)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-mutation",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CROWN_ENABLE_SANITIZERS": "OFF",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "debug"
+    },
+    {
+      "name": "release",
+      "configurePreset": "release"
+    },
+    {
+      "name": "profile",
+      "configurePreset": "profile"
+    },
+    {
+      "name": "coverage",
+      "configurePreset": "coverage"
+    },
+    {
+      "name": "mutation",
+      "configurePreset": "mutation"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "release",
+      "configurePreset": "release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "coverage",
+      "configurePreset": "coverage",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "mutation",
+      "configurePreset": "mutation",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

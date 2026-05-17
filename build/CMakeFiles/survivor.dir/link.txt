@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -fsanitize=address,undefined -Wl,--dependency-file=CMakeFiles/survivor.dir/link.d CMakeFiles/survivor.dir/src/main.cpp.o -o survivor  libsurvivor_core.a libsurvivor_platform.a -lgcc_s_asneeded -lgcc_s_asneeded

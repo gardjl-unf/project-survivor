@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsurvivor_platform.a CMakeFiles/survivor_platform.dir/src/platform/app.cpp.o CMakeFiles/survivor_platform.dir/src/platform/renderer.cpp.o CMakeFiles/survivor_platform.dir/src/platform/ui_layer.cpp.o CMakeFiles/survivor_platform.dir/src/platform/screen_manager.cpp.o CMakeFiles/survivor_platform.dir/src/platform/texture_manager.cpp.o CMakeFiles/survivor_platform.dir/src/platform/greyscale_effect.cpp.o
+/usr/bin/ranlib libsurvivor_platform.a

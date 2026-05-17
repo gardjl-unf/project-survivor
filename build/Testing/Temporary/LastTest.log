@@ -1,0 +1,20 @@
+Start testing: May 17 11:20 EDT
+----------------------------------------------------------
+1/1 Testing: ecs
+1/1 Test: ecs
+Command: "/home/jasong/Code/project-survivor/build/tests/test_ecs"
+Directory: /home/jasong/Code/project-survivor/build/tests
+"ecs" start time: May 17 11:20 EDT
+Output:
+----------------------------------------------------------
+Running ECS tests...
+PASS: Basic ECS operations
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"ecs" end time: May 17 11:20 EDT
+"ecs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 17 11:20 EDT
